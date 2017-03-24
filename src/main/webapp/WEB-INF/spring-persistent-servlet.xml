@@ -45,13 +45,13 @@
 		<constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
 	</bean>
 
-<!--	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
 		<property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
 		<property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
 		<property name="driverClassName" value="org.postgresql.Driver"></property>
 	</bean>
--->
+
   <!--  <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="${database.driver}"></property>
         <property name="url" value="${database.url}"></property>
@@ -59,12 +59,7 @@
         <property name="password" value="${database.password}"></property>
     </bean>
 -->	
-    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="org.postgresql.Driver"></property>
-        <property name="url" value="${database.url}"></property>
-        <property name="username" value="${database.username}"></property>
-        <property name="password" value="${database.password}"></property>
-    </bean>
+    
 	
     <bean id="loginSessionFactory"
           class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
