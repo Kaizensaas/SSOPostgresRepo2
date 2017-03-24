@@ -60,7 +60,7 @@
     </bean>
 -->	
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-        <property name="driverClassName" value="${database.driver}"></property>
+        <property name="driverClassName" value="org.postgresql.Driver"></property>
         <property name="url" value="${database.url}"></property>
         <property name="username" value="${database.username}"></property>
         <property name="password" value="${database.password}"></property>
